@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+
+        int i = 0;
+        int count = 0;
+
+        while ( i < nums.size()){
+            if (nums[i] == val){
+               nums[i] = nums.back();
+               nums.pop_back();
+            }
+            else{
+                i++;
+                count++;
+            }
+        }
+        return count;
+    }
+};
